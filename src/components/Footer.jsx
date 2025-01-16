@@ -20,7 +20,7 @@ export default function Footer() {
     <footer>
       <p>
         <a href="https://github.com/Raumus204" target="_blank">
-            <img src="public\github-mark-white.png" alt="GitHub Logo" width="30" height="30"></img>
+            <img src="mark-white.png" alt="GitHub Logo" width="30" height="30"></img>
         </a>
     </p>
       <p>&copy; {new Date().getFullYear()} {currentTime}</p>
