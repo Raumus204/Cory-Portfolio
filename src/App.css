@@ -1,0 +1,23 @@
+/* Ensures the app container takes the full height of the viewport */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Full viewport height */
+}
+
+/* Content should take up remaining space and not be hidden behind navbar */
+.content {
+  flex-grow: 1;  /* Make content area grow to take up available space */
+  padding: 90px 20px 20px;  /* Add padding to prevent content from being under fixed navbar */
+  overflow: auto;  /* Make sure long content can scroll */
+}
+
+/* Ensuring footer stays in the document flow */
+footer {
+  background-color: #0e0e0e ;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px; 
+  position: relative; 
+}
