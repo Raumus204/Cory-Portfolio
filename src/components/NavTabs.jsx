@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 function NavTabs() {
   const currentPage = useLocation().pathname;
 
@@ -7,9 +8,7 @@ function NavTabs() {
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container-fluid">
         {/* Logo/Image */}
-        <Link to="/" className="navbar-brand">
-          <h3 className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>Cory Melton</h3>
-        </Link>
+        <h3 className="navbar-brand">Cory Melton</h3>
 
         {/* Navbar Toggler (for small screens) */}
         <button
@@ -29,8 +28,8 @@ function NavTabs() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link
-                to="/About"
-                className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
+                to="/"
+                className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
               >
                 About
               </Link>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [errors, setErrors] = useState({});
@@ -27,10 +28,27 @@ export default function Contact() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      setSuccessMessage("Form submitted successfully!");
-      e.target.reset();
+      // Send email using EmailJS
+      emailjs
+        .sendForm(
+          "service_ubwe7dg", 
+          "template_blp6iqt", 
+          e.target,
+          "6JhrGYFmYkZvRu031" 
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSuccessMessage("Form submitted successfully! Email sent.");
+            e.target.reset();
+          },
+          (error) => {
+            console.error(error.text);
+            setSuccessMessage("Form submitted, but email failed to send.");
+          }
+        );
     } else {
-      setSuccessMessage(""); 
+      setSuccessMessage("");
     }
   };
 
@@ -55,7 +73,7 @@ export default function Contact() {
         <textarea
           id="message"
           name="message"
-          placeholder="Write your message here..."
+          placeholder="Write your message here and submit to send me an email!"
           rows="5"
         ></textarea>
         {errors.message && <p className="error">{errors.message}</p>}
@@ -68,7 +86,7 @@ export default function Contact() {
       <h3>My Contact Info:</h3>
       <br />
       <p>Email: Enacra204@gmail.com</p>
-      <p>Phone: 2107819412</p>
+      <p>Phone: 210-633-7865</p>
     </div>
   );
 }

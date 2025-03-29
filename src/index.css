@@ -40,6 +40,8 @@
 h3.nav-link.active{
   color:#18dcff;
 }
+
+
 /* Navbar CSS END */
 
 /* Card CSS */
@@ -165,7 +167,6 @@ button:focus-visible {
     flex-direction: column; 
     text-align: center; 
     background-color: #0e0e0e;
-    width:100px;
   }
   .navbar-nav .nav-item {
     margin-bottom: 10px;

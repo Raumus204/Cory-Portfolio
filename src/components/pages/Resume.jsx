@@ -23,7 +23,7 @@ export default function Resume() {
             <li>GitHub</li>
             <li>VS Code</li>
             <li>Microsoft Office</li>
-            <li>Windows</li>
+            <li>Windows XP, Vista, 7, 10, 11</li>
         </ul>
         <h2>Experience</h2>
         <p>UTSA Coding Bootcamp - Online - Sep-2024 - Current</p>
