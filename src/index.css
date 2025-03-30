@@ -18,6 +18,8 @@
   padding: 1rem 6rem;
   background-color: #0e0e0e;
   height: 100px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .navbar-brand img {
@@ -180,4 +182,6 @@ footer {
   padding: 2em;
   font-size: 0.8em;
   color: #888;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
